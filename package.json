@@ -4,20 +4,14 @@
   "description": "Browserified Angular.JS",
   "main": "index.js",
   "scripts": {
-    "test": "./test/run_test.js",
-    "prepublish": "./build.js"
+    "test": "./test/run_test.js"
   },
   "dependencies" :{
-    "AngularJS": "git://github.com/darvin/angular.js.git"
+    "AngularJS": "git://github.com/angular/angular.js"
   },
   "devDependencies": {
     "browserify": "*",
-    "async": "*",
-    "shelljs": "*",
-    "grunt": "*",
-    "tape": "*",
     "phantomjs": "*"
-
   },
   "repository": {
     "type": "git",
@@ -27,7 +21,7 @@
     "Angular",
     "browserify"
   ],
-  "author": "Sergey Klimov <sergey.v.klimov@gmail.com> (http://darvin.github.com/)",
+  "author": "Sam Newman <acutecoder@gmail.com> (http://sonewman.github.com/)",
   "license": "BSD",
   "bugs": {
     "url": "https://github.com/darvin/angular-browserify/issues"

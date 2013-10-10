@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/darvin/angular-browserify.png)](https://travis-ci.org/darvin/angular-browserify)
-
 angular-browserify
 ==================
 

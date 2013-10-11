@@ -1,22 +1,10 @@
 #!/usr/bin/env node
 /* jshint laxcomma:true */
+var spawnify = require('../lib/spawnify')
+  , browserifyTest = spawnify('./node_modules/.bin/browserify ./test/test.js -o ./test/test-bundle.js');
 
-// require('shelljs/global');
-// var path = require('path')
-//   , fs = require('fs');
-// var BROWSERIFIED_TEST = path.join(__dirname, "test_browserified.js");
-// exec("./node_modules/.bin/browserify ./test/test.js", function(code, output){
-//   if (code!=0) {
-//     process.exit(code);
-//   }
-//   fs.writeFileSync(BROWSERIFIED_TEST, output);
-//   var phantomExec = exec("./node_modules/.bin/phantomjs "+BROWSERIFIED_TEST);
-
-
-//   if (phantomExec.code!=0) {
-//     process.exit(phantomExec.code);
-//   }
-
-
-// });
-
+browserifyTest.pipe(process.stdout);
+browserifyTest.on('end', function () {
+  spawnify('./node_modules/.bin/phantomjs ./test/test.js')
+    .pipe(process.stdout);
+});

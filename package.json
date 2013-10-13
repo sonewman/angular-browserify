@@ -7,7 +7,8 @@
     "test": "./test/run_test.js"
   },
   "dependencies" :{
-    "AngularJS": "git://github.com/angular/angular.js"
+    "AngularJS": "git://github.com/angular/angular.js",
+    "bashy" : "git://github.com/sonewman/bashy.git"
   },
   "devDependencies": {
     "browserify": "*",

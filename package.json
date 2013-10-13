@@ -7,9 +7,11 @@
     "test": "./test/run_test.js",
     "postinstall": "node ./build.js"
   },
-  "dependencies" :{
+  "dependencies": {
     "AngularJS": "https://github.com/angular/angular.js/tarball/g3_v1_2",
-    "bashy" : "https://github.com/sonewman/bashy/tarball/master"
+    "bashy": "https://github.com/sonewman/bashy/tarball/master",
+    "async": "~0.2.9",
+    "shelljs": "~0.2.6"
   },
   "devDependencies": {
     "browserify": "*",

@@ -1,5 +1,5 @@
 node_modules
-test/test_browserified.js
+test/test-bundle.js
 
 lib-cov
 *.seed

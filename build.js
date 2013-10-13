@@ -5,6 +5,6 @@
 var b = require('bashy');
 var c = b('cd ./node_modules/angularjs && npm install && grunt package');
 c.on('error', function (err) {
-  console.log('err', err)
+  console.log('err', err);
 });
 c.pipe(process.stdout);

@@ -4,7 +4,8 @@
   "description": "Browserified Angular.JS",
   "main": "index.js",
   "scripts": {
-    "test": "./test/run_test.js"
+    "test": "./test/run_test.js",
+    "postinstall": "node ./build.js"
   },
   "dependencies" :{
     "AngularJS": "git://github.com/angular/angular.js",

@@ -1,0 +1,1 @@
+require("./build/scenario-min.js");

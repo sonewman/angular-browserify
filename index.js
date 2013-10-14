@@ -1,2 +1,2 @@
-require("./build/angular.js");
+require("./build/angular-min.js");
 module.exports = window.angular;

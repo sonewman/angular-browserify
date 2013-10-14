@@ -27,6 +27,7 @@ var util = require(ANGULAR_PATH+'./lib/grunt/utils');
 
 
 var builds = grunt.config('build');
+var mins = grunt.config('min');
 
 builds = Object.keys(builds).map(function(key){ return builds[key]; });
 async.forEach(builds, util.build.bind(util), function(err) {
@@ -37,6 +38,19 @@ async.forEach(builds, util.build.bind(util), function(err) {
     console.log("File "+build.dest+" copied");
     callback(null);
   }, function(err) {
-      console.log("Done!");
+      minify();
+      // console.log("Done!");
+      
   });
 });
+
+function minify () {
+  Object.keys(mins).forEach(function (key, i) {
+    var cmd = path.join(__dirname, './node_modules/.bin/uglifyjs') +
+      ' '+ path.join(__dirname, mins[key]) + ' -o ' +
+      path.join(OUTPUT_PATH, key + '-min.js');
+
+    exec(cmd);
+    console.log("File "+key+" minified");
+  });
+}
